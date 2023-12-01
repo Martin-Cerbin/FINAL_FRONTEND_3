@@ -8,8 +8,9 @@ import { reducer } from "../../reducers/reducer";
 
  const ContextProvider = ({ children }) => {
 
-  const [state, dispatch] = useReducer(reducer, initialState)
+ const [state, dispatch] = useReducer(reducer, initialState)
  
+  // CONEXION CON API
   const url = 'https://jsonplaceholder.typicode.com/users'
 
   useEffect(() => {
@@ -18,12 +19,11 @@ import { reducer } from "../../reducers/reducer";
       console.log('se llamo API global')
   }, [])
 
+  // AGREGAR FAVORITOS A LOCAL STORAGE
   useEffect(()=>{
     localStorage.setItem('favArray',JSON.stringify(state.favArray))
   },[state.favArray])
   
-
-
   return (
     <ContextGlobal.Provider value={{ state, dispatch }}>
       {children}

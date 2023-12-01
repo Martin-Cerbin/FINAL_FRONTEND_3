@@ -7,6 +7,7 @@ const Form = () => {
   const [errorNombre, setErrorNombre] = useState('');
   const [errorEmail, setErrorEmail] = useState('');
 
+  // VALIDACION DE FORMULARIO
   const validarFormulario = () => {
     let valido = true;
     const mensajeError = "Por favor verifique su información nuevamente"
@@ -30,6 +31,7 @@ const Form = () => {
     return valido;
   };
 
+  // OCULTAR FORMULARIO UNA VEZ ENVIADO
   const [show, setShow] = useState(false)
 
   const handleSubmit = (e) => {

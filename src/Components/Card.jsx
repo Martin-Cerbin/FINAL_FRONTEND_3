@@ -2,8 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useContextGlobal } from "./utils/global.context";
 
-
-
 const Card = ({ item }) => {
   const [favorito, setFavorito] = useState(false)
 
@@ -20,7 +18,7 @@ const Card = ({ item }) => {
     objetoEncontrado && setFavorito(true)
   }, [])
 
-
+  // FUNCION PARA AGREGAR O ILIMINAR FAVORITO MEDIANTE BOTON
   const addFav = () => {
     setFavorito(!favorito)
     favorito? dispatch({ type: 'DELETE_FAV', payload: item.id }) : dispatch({ type: 'ADD_FAV', payload: item })

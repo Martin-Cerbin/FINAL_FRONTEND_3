@@ -9,16 +9,18 @@ import { useContextGlobal } from '../Components/utils/global.context'
 
 const Detail = () => {
 
-  // const [odontologo, setOdontologo] = useState()
+  // OBTENER ID DE LA URL
   const { id } = useParams()
 
   const { state, dispatch } = useContextGlobal()
+
   const odontologo = state.data
+
+   // LLAMADO A API
   const url = 'https://jsonplaceholder.typicode.com/users/' + id
   useEffect(() => {
     axios(url)
       .then(res => dispatch({ type: 'GET_ODONTOLOGO', payload: res.data }))
-    console.log('se llamo API DETAIL')
   }, [])
   
   return (
@@ -31,7 +33,6 @@ const Detail = () => {
         <h3>Website: {odontologo.website}</h3>
       </div>
     </div>
-
   )
 }
 

@@ -8,7 +8,6 @@ const Home = () => {
 
   const { state } = useContextGlobal()
 
-  
   return (
  
     <main className="" >

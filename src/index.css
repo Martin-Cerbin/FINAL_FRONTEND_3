@@ -75,7 +75,7 @@ a {
   font-size:20px;
 }
 a:hover {
-  text-shadow: 4px 4px 10px rgb(255, 255, 255);
+  text-decoration: underline;
 }
 
 
@@ -116,6 +116,8 @@ form label {
   display: block;
   margin-bottom: 6px;
   font-weight: bold;
+  color: #000;
+  text-align: left;
 }
 
 form input{
@@ -192,11 +194,13 @@ img{
 
 /* ========== DETAILS ==========*/
 .cardDetail {
-  padding: 16px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 500px;
-  margin: 20px;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #000;
 }
 .contenido-detail{
   margin-top: 10vh;
